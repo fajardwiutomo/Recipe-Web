@@ -30,11 +30,11 @@ const Category = () => {
       <Navbar />
       <div className="px-10 mx-auto">
         <h1 className="text-lg font-medium mt-10">{categoryName} Recipes</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {list.map((item, index) => {
             return (
-              <div key={index} className="flex flex-col justify-center items-center gap-5">
-                <div className="h-32 w-40">
+              <div key={index}>
+             
                   <img
                     onClick={() => {
                       console.log(item.idMeal);
@@ -43,8 +43,8 @@ const Category = () => {
                     className="mt-5 rounded-lg"
                     src={item.strMealThumb}
                   />
-                </div>
-                <h1 className="mt-10 text-sm text-gray-500 font-medium">
+            
+                <h1 className="mt-2 text-sm text-gray-500 font-medium">
                   {item.strMeal}
                 </h1>
               </div>
